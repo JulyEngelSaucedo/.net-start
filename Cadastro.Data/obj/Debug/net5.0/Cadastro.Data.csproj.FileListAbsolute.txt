@@ -1,0 +1,12 @@
+E:\Projetos\C#\cadastro\Cadastro.Data\bin\Debug\net5.0\Cadastro.Data.deps.json
+E:\Projetos\C#\cadastro\Cadastro.Data\bin\Debug\net5.0\Cadastro.Data.dll
+E:\Projetos\C#\cadastro\Cadastro.Data\bin\Debug\net5.0\ref\Cadastro.Data.dll
+E:\Projetos\C#\cadastro\Cadastro.Data\bin\Debug\net5.0\Cadastro.Data.pdb
+E:\Projetos\C#\cadastro\Cadastro.Data\obj\Debug\net5.0\Cadastro.Data.csprojAssemblyReference.cache
+E:\Projetos\C#\cadastro\Cadastro.Data\obj\Debug\net5.0\Cadastro.Data.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projetos\C#\cadastro\Cadastro.Data\obj\Debug\net5.0\Cadastro.Data.AssemblyInfoInputs.cache
+E:\Projetos\C#\cadastro\Cadastro.Data\obj\Debug\net5.0\Cadastro.Data.AssemblyInfo.cs
+E:\Projetos\C#\cadastro\Cadastro.Data\obj\Debug\net5.0\Cadastro.Data.csproj.CoreCompileInputs.cache
+E:\Projetos\C#\cadastro\Cadastro.Data\obj\Debug\net5.0\Cadastro.Data.dll
+E:\Projetos\C#\cadastro\Cadastro.Data\obj\Debug\net5.0\ref\Cadastro.Data.dll
+E:\Projetos\C#\cadastro\Cadastro.Data\obj\Debug\net5.0\Cadastro.Data.pdb

@@ -1,0 +1,15 @@
+E:\Projetos\C#\cadastro\Cadastro.Services\bin\Debug\net5.0\Cadastro.Services.deps.json
+E:\Projetos\C#\cadastro\Cadastro.Services\bin\Debug\net5.0\Cadastro.Services.dll
+E:\Projetos\C#\cadastro\Cadastro.Services\bin\Debug\net5.0\ref\Cadastro.Services.dll
+E:\Projetos\C#\cadastro\Cadastro.Services\bin\Debug\net5.0\Cadastro.Services.pdb
+E:\Projetos\C#\cadastro\Cadastro.Services\obj\Debug\net5.0\Cadastro.Services.csprojAssemblyReference.cache
+E:\Projetos\C#\cadastro\Cadastro.Services\obj\Debug\net5.0\Cadastro.Services.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projetos\C#\cadastro\Cadastro.Services\obj\Debug\net5.0\Cadastro.Services.AssemblyInfoInputs.cache
+E:\Projetos\C#\cadastro\Cadastro.Services\obj\Debug\net5.0\Cadastro.Services.AssemblyInfo.cs
+E:\Projetos\C#\cadastro\Cadastro.Services\obj\Debug\net5.0\Cadastro.Services.csproj.CoreCompileInputs.cache
+E:\Projetos\C#\cadastro\Cadastro.Services\obj\Debug\net5.0\Cadastro.Services.dll
+E:\Projetos\C#\cadastro\Cadastro.Services\obj\Debug\net5.0\ref\Cadastro.Services.dll
+E:\Projetos\C#\cadastro\Cadastro.Services\obj\Debug\net5.0\Cadastro.Services.pdb
+E:\Projetos\C#\cadastro\Cadastro.Services\bin\Debug\net5.0\Cadastro.Data.dll
+E:\Projetos\C#\cadastro\Cadastro.Services\bin\Debug\net5.0\Cadastro.Data.pdb
+E:\Projetos\C#\cadastro\Cadastro.Services\obj\Debug\net5.0\Cadastro.Services.csproj.CopyComplete
