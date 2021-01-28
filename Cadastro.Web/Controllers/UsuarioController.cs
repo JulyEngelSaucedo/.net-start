@@ -4,6 +4,8 @@ using Microsoft.Extensions.Logging;
 using Cadastro.Services;
 using Cadastro.Data.Models;
 using Cadastro.Web.RequestModels;
+using System;
+
 namespace Cadastro.Web.Controllers
 {
     [ApiController]
@@ -17,30 +19,62 @@ namespace Cadastro.Web.Controllers
 
         private readonly ILogger<UsuarioController> _logger;
         private readonly IUsuarioService _usuarioService;
-        public UsuarioController(ILogger<UsuarioController> logger, IUsuarioService usuarioService)
+        private readonly IClienteService _clienteService;
+        public UsuarioController(ILogger<UsuarioController> logger, IUsuarioService usuarioService, IClienteService clienteService)
         {
             _logger = logger;
             _usuarioService = usuarioService;
+            _clienteService = clienteService;
         }
 
-        [HttpGet("/api/usuario")]
+        [HttpGet("/api/cliente")]
         public ActionResult GetUsuarios()
         {
-           var usuarios = _usuarioService.obterTodos();
-            return Ok(usuarios);
+           var clientes = _clienteService.obterTodos();
+            return Ok(clientes);
         }
 
-        [HttpPost("/api/usuario")]
-        public ActionResult criarUSuario([FromBody] NewUsuarioRequest bookRequest)
+        [HttpGet("/api/autenticacao")]
+        public ActionResult autenticacao([FromBody] NewUsuarioRequest usuarioRequest)
         {
             var usuario = new Usuario();
-            usuario.CPF = bookRequest.CPF;
-            usuario.Nome = bookRequest.Nome;
+            usuario.Nome = usuarioRequest.Nome;
+            usuario.Senha = usuarioRequest.Senha;
+
+            Boolean resposta = _usuarioService.usuarioExiste(usuario);
+            return Ok(resposta);
+        }
+
+        [HttpPost("/api/cliente")]
+        public ActionResult criarCliente([FromBody] NewClienteRequest clienteReq)
+        {
+            var cliente = new Cliente();
+            cliente.Nome = clienteReq.Nome;
+            cliente.dataNascimento = clienteReq.dataNascimento;
+            cliente.CPF = clienteReq.CPF;
+            cliente.telefones = clienteReq.telefones;
 
 
-            _usuarioService.adicionarUsuario(usuario);
+            _clienteService.adicionarCliente(cliente);
 
-            return Ok("Livro Criado");
+            return Ok("Cliente Criado");
+
+        }
+
+        [HttpPost("/api/editarcliente")]
+        public ActionResult editarCliente([FromBody] NewClienteRequest clienteReq)
+        {
+            var cliente = new Cliente();
+            cliente.Id = clienteReq.Id;
+            cliente.Nome = clienteReq.Nome;
+            cliente.dataNascimento = clienteReq.dataNascimento;
+            cliente.CPF = clienteReq.CPF;
+            cliente.telefones = clienteReq.telefones;
+
+
+            _clienteService.editarCliente(cliente);
+
+            return Ok("Cliente Editado");
 
         }
     }

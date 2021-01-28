@@ -11,5 +11,7 @@ namespace Cadastro.Data
         public UsuarioDbContext() { }
         public UsuarioDbContext(DbContextOptions options) : base(options) { }
         public virtual DbSet<Models.Usuario> Usuarios {get; set;}
+
+        public virtual DbSet<Models.Cliente> Cliente { get; set; }
     }
 }

@@ -37,7 +37,7 @@ namespace Cadastro.Web
                 opts.UseNpgsql(Configuration.GetConnectionString("usuario.dev"));
             });
             services.AddTransient<IUsuarioService, UsuarioService>();
-
+            services.AddTransient<IClienteService, ClienteService>();
 
             services.AddSwaggerGen(c =>
             {
@@ -45,6 +45,7 @@ namespace Cadastro.Web
             });
 
             services.AddTransient<UsuarioService, UsuarioService>();
+            services.AddTransient<ClienteService, ClienteService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

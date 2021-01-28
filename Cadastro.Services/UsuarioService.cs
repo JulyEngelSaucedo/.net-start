@@ -30,5 +30,23 @@ namespace Cadastro.Services
         {
             return _db.Usuarios.ToList();
         }
+
+       
+        bool IUsuarioService.usuarioExiste(Usuario usuario)
+        {
+            List<Usuario> listaDeUsuarios = _db.Usuarios.ToList();
+            foreach (Usuario elemento in listaDeUsuarios)
+
+            {
+             
+                if (elemento.Nome.Equals(usuario.Nome) && elemento.Senha.Equals(usuario.Senha))
+                {
+                    Console.WriteLine("Ta Vindo Aqui");
+                    return true;
+                }
+
+            }
+            return false;
+        }
     }
 }

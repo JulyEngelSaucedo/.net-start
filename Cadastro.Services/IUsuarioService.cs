@@ -10,6 +10,8 @@ namespace Cadastro.Services
     public interface IUsuarioService
     {
         public void adicionarUsuario(Usuario usuario);
+
+        public bool usuarioExiste(Usuario usuario);
         public void deletarUsuario(int usuarioId);
         public List<Usuario> obterTodos();
       

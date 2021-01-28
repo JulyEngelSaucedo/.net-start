@@ -11,7 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Cadastro.Data.Migrations
 {
     [DbContext(typeof(UsuarioDbContext))]
-    [Migration("20210127200636_initial")]
+    [Migration("20210128192214_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -22,7 +22,7 @@ namespace Cadastro.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63)
                 .HasAnnotation("ProductVersion", "5.0.2");
 
-            modelBuilder.Entity("Cadastro.Data.Models.Usuario", b =>
+            modelBuilder.Entity("Cadastro.Data.Models.Cliente", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -40,6 +40,24 @@ namespace Cadastro.Data.Migrations
 
                     b.Property<List<string>>("telefones")
                         .HasColumnType("text[]");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Cliente");
+                });
+
+            modelBuilder.Entity("Cadastro.Data.Models.Usuario", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .UseIdentityByDefaultColumn();
+
+                    b.Property<string>("Nome")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Senha")
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
