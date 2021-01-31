@@ -34,7 +34,7 @@ namespace Cadastro.Web.Controllers
             return Ok(clientes);
         }
 
-        [HttpGet("/api/autenticacao")]
+        [HttpPost("/api/autenticacao")]
         public ActionResult autenticacao([FromBody] NewUsuarioRequest usuarioRequest)
         {
             var usuario = new Usuario();
@@ -57,7 +57,7 @@ namespace Cadastro.Web.Controllers
 
             _clienteService.adicionarCliente(cliente);
 
-            return Ok("Cliente Criado");
+            return Ok(cliente);
 
         }
 
@@ -74,7 +74,7 @@ namespace Cadastro.Web.Controllers
 
             _clienteService.editarCliente(cliente);
 
-            return Ok("Cliente Editado");
+            return Ok(cliente);
 
         }
     }
