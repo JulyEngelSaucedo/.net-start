@@ -12,27 +12,18 @@ namespace Cadastro.Web.Controllers
 
     public class UsuarioController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
 
-        private readonly ILogger<UsuarioController> _logger;
+        
         private readonly IUsuarioService _usuarioService;
-        private readonly IClienteService _clienteService;
-        public UsuarioController(ILogger<UsuarioController> logger, IUsuarioService usuarioService, IClienteService clienteService)
+      
+        public UsuarioController(IUsuarioService usuarioService, IClienteService clienteService)
         {
-            _logger = logger;
+          
             _usuarioService = usuarioService;
-            _clienteService = clienteService;
+          
         }
 
-        [HttpGet("/api/cliente")]
-        public ActionResult GetUsuarios()
-        {
-           var clientes = _clienteService.obterTodos();
-            return Ok(clientes);
-        }
+        
 
         [HttpPost("/api/autenticacao")]
         public ActionResult autenticacao([FromBody] NewUsuarioRequest usuarioRequest)
@@ -45,37 +36,7 @@ namespace Cadastro.Web.Controllers
             return Ok(resposta);
         }
 
-        [HttpPost("/api/cliente")]
-        public ActionResult criarCliente([FromBody] NewClienteRequest clienteReq)
-        {
-            var cliente = new Cliente();
-            cliente.Nome = clienteReq.Nome;
-            cliente.dataNascimento = clienteReq.dataNascimento;
-            cliente.CPF = clienteReq.CPF;
-            cliente.telefones = clienteReq.telefones;
+        
 
-
-            _clienteService.adicionarCliente(cliente);
-
-            return Ok(cliente);
-
-        }
-
-        [HttpPost("/api/editarcliente")]
-        public ActionResult editarCliente([FromBody] NewClienteRequest clienteReq)
-        {
-            var cliente = new Cliente();
-            cliente.Id = clienteReq.Id;
-            cliente.Nome = clienteReq.Nome;
-            cliente.dataNascimento = clienteReq.dataNascimento;
-            cliente.CPF = clienteReq.CPF;
-            cliente.telefones = clienteReq.telefones;
-
-
-            _clienteService.editarCliente(cliente);
-
-            return Ok(cliente);
-
-        }
     }
 }

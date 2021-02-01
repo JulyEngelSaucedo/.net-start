@@ -18,8 +18,20 @@ namespace Cadastro.Services
 
         void IClienteService.adicionarCliente(Cliente cliente)
         {
-            _db.Add(cliente);
-            _db.SaveChanges();
+            var existe = _db.Cliente.FirstOrDefault(c => c.CPF == cliente.CPF);
+
+            if(existe == null)
+            {
+                _db.Add(cliente);
+                _db.SaveChanges();
+            }
+            else
+            {
+                throw new Exception("Um cliente já foi cadastrado com esse CPF!");
+            }
+
+
+            
         }
 
      

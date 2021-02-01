@@ -41,7 +41,7 @@ namespace Cadastro.Services
              
                 if (elemento.Nome.Equals(usuario.Nome) && elemento.Senha.Equals(usuario.Senha))
                 {
-                    Console.WriteLine("Ta Vindo Aqui");
+                   
                     return true;
                 }
 
